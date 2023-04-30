@@ -1,13 +1,13 @@
 <html>
 
 <body>
-    <div>
-        <p class="name">Deneme Sayfası</p>
+    <div style="display: table; margin-right: auto; margin-left: auto;">
+        <p class="name" style="background-color:#fff; text-align: center;">Deneme Sayfası</p>
         <button class="btnB" onclick="changeColortoBlue()">Buton rengini maviye değiştir</button>
         <p></p>
         <button class="btnR" onclick="changeColortoRandom()">Buton rengini rastgele değiştir</button>
         <p></p>
-        <span id="colorText"></span>
+        <p id="colorText" style="background-color:#fff; text-align: center;"></span>
     </div>
 </body>
 
@@ -24,8 +24,12 @@
 
     function changeColortoRandom() {
         const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-        btnr.style.color = "#" + randomColor;
-        colorText.innerHTML = "#" + randomColor;
+        var clr =  "#" + randomColor;
+
+        btnr.style.color = clr;
+        colorText.innerHTML = clr;
+        colorText.backgroundColor = "#fff";
+        document.body.style.backgroundColor = clr;
     }
 
 </script>
