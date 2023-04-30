@@ -3,7 +3,8 @@
 <body>
     <div>
         <p class="name">Deneme Sayfası</p>
-        <button class="btn" onclick="changeColor()">Buton rengini maviye değiştir</button>
+        <button class="btn" onclick="changeColortoBlue()">Buton rengini maviye değiştir</button>
+        <span id="colorText"></span>
     </div>
 </body>
 
@@ -11,12 +12,18 @@
     // Your Scripts
 
 
-    const name = document.querySelector(".btn");
+    const obj = document.querySelector(".btn");
 
-    function changeColor() {
-        name.style.color = "blue";
+    function changeColortoBlue() {
+        obj.style.color = "blue";
     }
 
+    function changeColortoRandom() {
+        const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        obj.style.color = "#" + randomColor;
+        colorText.innerHTML = "#" + randomColor;
+    }
+    
 </script>
 
 </html>
