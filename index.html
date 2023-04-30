@@ -1,34 +1,43 @@
 <html>
 
+
+<head>
+</head>
+
 <body>
     <div style="display: table; margin-right: auto; margin-left: auto;">
         <p class="name" style="background-color:#fff; text-align: center;">Deneme Sayfası</p>
         <button class="btnB" onclick="changeColortoBlue()">Buton rengini maviye değiştir</button>
         <p></p>
-        <button class="btnR" onclick="changeColortoRandom()">Buton rengini rastgele değiştir</button>
+        <button class="btnR" onclick="changeColortoRandom()">Sayfa rengini rastgele değiştir</button>
+        <p></p>
+        <input type="button" onclick="testf()" value="run external javascript" style="display: none;">
         <p></p>
         <p id="colorText" style="background-color:#fff; text-align: center;"></span>
     </div>
 </body>
 
+
+
+<script src="js/tool.js" type="text/javascript"></script>
+
 <script>
     // Your Scripts
-
-
     const btnb = document.querySelector(".btnB");
     const btnr = document.querySelector(".btnR");
 
     function changeColortoBlue() {
-        btnb.style.color = "blue";
+        if (btnb.style.color != "blue")
+            btnb.style.color = "blue";
+        else
+            btnb.style.color = "black";
     }
 
     function changeColortoRandom() {
-        const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-        var clr =  "#" + randomColor;
+        const clr = randomColor();
 
         btnr.style.color = clr;
         colorText.innerHTML = clr;
-        colorText.backgroundColor = "#fff";
         document.body.style.backgroundColor = clr;
     }
 
