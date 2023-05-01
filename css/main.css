@@ -1,0 +1,19 @@
+button {  
+    color: red;
+    height: 50;
+  }
+
+  .btnB {  
+    color: blue;
+    height: 50;
+  }
+
+  .maindiv{
+    display: table;
+    margin-right: auto; 
+    margin-left: auto;
+  }
+
+  body{
+    zoom: 2;
+  }
